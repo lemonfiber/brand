@@ -91,3 +91,5 @@ changes to what the rules permit are `DES-R` changes. Read [AGENTS.md](AGENTS.md
   </a>
   &nbsp;&middot;&nbsp;<a href="https://discord.gg/daQmY23ym"><img alt="Discord" src=".github/discord.svg" height="20"></a>
 </p>
+
+<!-- ci verify -->
