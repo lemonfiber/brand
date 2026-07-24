@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">lemonfiber &mdash; brand</h1>
+<h1 align="center">Lemonfiber &mdash; brand</h1>
 
 <p align="center">
   Logo, colour, and type for lemonfiber. Single source of truth &mdash; pull
