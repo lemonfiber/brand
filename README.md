@@ -12,6 +12,11 @@
   assets from here rather than re-drawing or re-exporting.
 </p>
 
+<p align="center">
+  <a href="https://github.com/lemonfiber/brand/actions/workflows/tokens.yml"><img alt="tokens" src="https://github.com/lemonfiber/brand/actions/workflows/tokens.yml/badge.svg"></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/lemonfiber/brand"><img alt="OpenSSF Scorecard" src="https://api.scorecard.dev/projects/github.com/lemonfiber/brand/badge"></a>
+</p>
+
 ---
 
 ## Licence — read this first
