@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="lemonfiber one-colour mark">
+  <title>lemonfiber one-colour mark</title>
+  <circle cx="100" cy="100" r="97" fill="#17160F"></circle>
+  <circle cx="100" cy="100" r="86" fill="#FBF7EA"></circle>
+  <circle cx="100" cy="100" r="91.5" fill="none" stroke="#FBF7EA" stroke-width="3" stroke-dasharray="1.6 6.2"></circle>
+  <g fill="#17160F">
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(0 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(45 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(90 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(135 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(180 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(225 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(270 100 100)"></path>
+    <path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" transform="rotate(315 100 100)"></path>
+  </g>
+  <g stroke="#FBF7EA" stroke-width="15" fill="none">
+    <path d="M100,100 L100,20" transform="rotate(22.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(67.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(112.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(157.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(202.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(247.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(292.5 100 100)"></path>
+    <path d="M100,100 L100,20" transform="rotate(337.5 100 100)"></path>
+  </g>
+  <g stroke="#17160F" stroke-width="5.5" fill="none">
+    <path d="M100,100 L100,27" transform="rotate(22.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(67.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(112.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(157.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(202.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(247.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(292.5 100 100)"></path>
+    <path d="M100,100 L100,27" transform="rotate(337.5 100 100)"></path>
+  </g>
+  <g fill="#17160F">
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(22.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(67.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(112.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(157.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(202.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(247.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(292.5 100 100)"></rect>
+    <rect x="91.5" y="13" width="17" height="15" rx="2" transform="rotate(337.5 100 100)"></rect>
+  </g>
+  <circle cx="100" cy="100" r="21" fill="#17160F"></circle>
+  <circle cx="100" cy="100" r="13" fill="#FBF7EA"></circle>
+  <circle cx="100" cy="100" r="6" fill="#17160F"></circle>
+</svg>

@@ -1,0 +1,20 @@
+Copyright (c) 2026 NightWorks.io
+
+THE MARKS — PROPRIETARY
+
+The lemonfiber name, logo, wordmark, and marks in this repository
+(everything under assets/logo/) are proprietary. All rights reserved.
+No licence to use the marks is granted by this file.
+
+This protects the project's identity, the same way Rust, Mozilla and
+Python protect their trademarks inside otherwise-open projects. You may
+fork and build on the code, but not ship it under the lemonfiber name or
+logo.
+
+THE REST — OPEN
+
+- tokens/  (tokens.css, tokens.json) are licensed under the Hippocratic
+  License 3.0. See LICENSE-tokens.
+- .docs/   (usage documentation) is licensed under CC BY-SA 4.0.
+
+See https://github.com/lemonfiber/spec/blob/main/90-appendix/license-rationale.md

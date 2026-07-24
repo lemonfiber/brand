@@ -1,0 +1,59 @@
+:root {
+  /* Colour — core */
+  --lf-color-ink: #17160F;
+  --lf-color-ink-soft: #241F14;
+  --lf-color-lemon: #F0C419;
+  --lf-color-lemon-bright: #FFD84D;
+  --lf-color-fiber: #E07A17;
+  --lf-color-fiber-deep: #A85A12;
+  --lf-color-fiber-light: #F09A3C;
+  --lf-color-leaf: #5B6B2A;
+
+  /* Colour — surfaces */
+  --lf-color-paper: #FBF7EA;
+  --lf-color-pith: #FBF6E7;
+  --lf-color-canvas: #EDE7D5;
+  --lf-color-line: #DAD2BC;
+  --lf-color-line-soft: #E4DCC7;
+  --lf-color-text-muted: #6E6A57;
+  --lf-color-text-faint: #8B8770;
+
+  /* Type */
+  --lf-font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --lf-weight-display: 800;
+  --lf-weight-body: 500;
+  --lf-tracking-display: -0.045em;
+  --lf-tracking-eyebrow: 0.18em;
+
+  --lf-size-display-xl: 54px;
+  --lf-size-display-l: 38px;
+  --lf-size-display-m: 27px;
+  --lf-size-body: 15px;
+  --lf-size-caption: 13px;
+  --lf-size-eyebrow: 12px;
+
+  /* Space — 4px base */
+  --lf-space-1: 4px;
+  --lf-space-2: 8px;
+  --lf-space-3: 12px;
+  --lf-space-4: 16px;
+  --lf-space-5: 24px;
+  --lf-space-6: 32px;
+  --lf-space-7: 40px;
+  --lf-space-8: 56px;
+
+  /* Radius & elevation */
+  --lf-radius-sm: 3px;
+  --lf-radius-md: 4px;
+  --lf-radius-icon: 22%;
+  --lf-radius-pill: 999px;
+  --lf-shadow-lift: 0 2px 5px rgba(23, 22, 15, 0.22);
+}
+
+[data-lf-theme="ink"] {
+  --lf-color-paper: #17160F;
+  --lf-color-pith: #241F14;
+  --lf-color-fiber: #F09A3C;
+  --lf-color-text: #FBF7EA;
+  --lf-color-line: #34322A;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@lemonfiber/brand",
+  "version": "0.2.0",
+  "description": "lemonfiber logo, colour, and type tokens",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/lemonfiber/brand",
+  "repository": { "type": "git", "url": "https://github.com/lemonfiber/brand.git" },
+  "private": false,
+  "main": "tokens/tokens.json",
+  "exports": {
+    "./tokens.css": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/tokens.json",
+    "./logo/*": "./assets/logo/*"
+  },
+  "files": ["assets", "tokens", "LICENSE", "LICENSE-tokens"]
+}

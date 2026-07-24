@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="lemonfiber mark on ink">
+  <title>lemonfiber mark on ink</title>
+  <rect width="200" height="200" fill="#17160F"></rect>
+  <circle cx="100" cy="100" r="97" fill="#17160F"></circle>
+  <circle cx="100" cy="100" r="93" fill="#F0C419"></circle>
+  <circle cx="100" cy="100" r="87.5" fill="none" stroke="#17160F" stroke-width="3.6" stroke-dasharray="1.6 6.2" opacity=".65"></circle>
+  <circle cx="100" cy="100" r="82" fill="#241F14"></circle>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#17160F" stroke-width="3"></circle>
+  <g transform="rotate(0 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(45 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(90 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(135 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(180 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(225 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(270 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(315 100 100)"><path d="M100,99 C112,84 118,63 114,42 C108,35 92,35 86,42 C82,63 88,84 100,99 Z" fill="#F0C419" stroke="#17160F" stroke-width="3" stroke-linejoin="round"></path>
+      <g fill="none" stroke="#17160F" stroke-width="1.1" opacity=".38" stroke-linecap="round">
+        <path d="M100,93 C107,80 111,62 108,47"></path><path d="M100,93 C100,77 100,59 100,45"></path><path d="M100,93 C93,80 89,62 92,47"></path>
+      </g>
+      <path d="M100,99 C112,84 118,63 114,42" fill="none" stroke="#241F14" stroke-width="1.7" opacity=".5"></path></g>
+  <g transform="rotate(22.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(67.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(112.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(157.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(202.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(247.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(292.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <g transform="rotate(337.5 100 100)"><path d="M100,100 L100,27" stroke="#17160F" stroke-width="9.5" fill="none"></path>
+      <path d="M100,100 L100,27" stroke="#F09A3C" stroke-width="3.6" fill="none"></path>
+      <rect x="91.5" y="13" width="17" height="15" rx="2" fill="#17160F"></rect>
+      <rect x="95" y="16" width="10" height="3" rx="1.5" fill="#F09A3C"></rect></g>
+  <circle cx="100" cy="100" r="21" fill="#17160F"></circle>
+  <circle cx="100" cy="100" r="14.5" fill="none" stroke="#241F14" stroke-width="1.7" stroke-dasharray="1.8 4.4"></circle>
+  <circle cx="100" cy="100" r="8.5" fill="#F0C419"></circle>
+  <circle cx="100" cy="100" r="3.4" fill="#17160F"></circle>
+</svg>
