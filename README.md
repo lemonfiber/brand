@@ -51,9 +51,10 @@ tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 
 Or via npm, how the web UI consumes it:
 
-```
+```console
 npm install @lemonfiber/brand
 ```
+
 ```css
 @import "@lemonfiber/brand/tokens.css";
 .header { background: var(--lf-color-paper); color: var(--lf-color-ink); }
