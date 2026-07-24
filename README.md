@@ -78,6 +78,11 @@ changes to what the rules permit are `DES-R` changes. Read [AGENTS.md](AGENTS.md
 ---
 
 <p align="center">
-  Created and maintained by <a href="https://nightworks.io">NightWorks.io</a>
-  &middot; <a href="https://discord.gg/daQmY23ym">Discord</a>
+  <a href="https://nightworks.io">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/nightworks-white.png">
+      <img alt="NightWorks.io" src=".github/nightworks-dark.png" height="20">
+    </picture>
+  </a>
+  &nbsp;&middot;&nbsp;<a href="https://discord.gg/daQmY23ym">Discord</a>
 </p>
