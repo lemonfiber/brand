@@ -49,7 +49,7 @@ tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 <img src="assets/logo/lockup-horizontal.svg" alt="lemonfiber" height="48">
 ```
 
-Or via npm, how the web UI consumes it:
+Or via npm, how `lemonfiber-web` consumes it:
 
 ```console
 npm install @lemonfiber/brand
