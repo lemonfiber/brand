@@ -8,8 +8,9 @@ Guidance for any AI agent working in this repo.
 
 ## What this repo is
 
-The design system — logo assets, colour/type/space tokens, usage docs. Published
-as `@lemonfiber/brand`. Spec:
+The design system — logo assets, colour/type/space tokens, usage docs. Packaged
+as `@lemonfiber/brand`, installed from this repo rather than from a registry.
+Spec:
 [`30-repos/brand.md`](https://github.com/lemonfiber/spec/blob/main/30-repos/brand.md)
 and [`60-brand/`](https://github.com/lemonfiber/spec/tree/main/60-brand).
 
