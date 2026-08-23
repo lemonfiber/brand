@@ -27,12 +27,12 @@
   --lf-tracking-display: -0.045em;
   --lf-tracking-eyebrow: 0.18em;
 
-  --lf-size-display-xl: 54px;
-  --lf-size-display-l: 38px;
-  --lf-size-display-m: 27px;
-  --lf-size-body: 15px;
-  --lf-size-caption: 13px;
-  --lf-size-eyebrow: 12px;
+  --lf-size-display-xl: 3.375rem;
+  --lf-size-display-l: 2.375rem;
+  --lf-size-display-m: 1.6875rem;
+  --lf-size-body: 0.9375rem;
+  --lf-size-caption: 0.8125rem;
+  --lf-size-eyebrow: 0.75rem;
 
   /* Space — 4px base */
   --lf-space-1: 4px;
