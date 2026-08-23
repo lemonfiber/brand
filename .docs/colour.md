@@ -1,17 +1,28 @@
 # Colour
 
-Four working colours and two surfaces. Lemon carries the personality, ink carries the structure, fibre-amber is reserved for the fibre itself — it is a signal colour, not a decorative one.
+Lemon carries the personality, ink carries the structure, fibre-amber is reserved for the fibre itself — it is a signal colour, not a decorative one.
 
-| Token | Hex | Role |
-| --- | --- | --- |
-| `--lf-color-ink` | #17160F | Text, outlines, dark surfaces |
-| `--lf-color-lemon` | #F0C419 | The fruit; primary brand colour |
-| `--lf-color-fiber` | #E07A17 | Fibre cores, active states |
-| `--lf-color-fiber-deep` | #A85A12 | "fiber" in the wordmark, links |
-| `--lf-color-leaf` | #5B6B2A | Leaf only |
-| `--lf-color-paper` | #FBF7EA | Default surface |
-| `--lf-color-pith` | #FBF6E7 | Inner surface, cards on paper |
-| `--lf-color-canvas` | #EDE7D5 | Page behind cards |
+The tokens hold the values and this page holds the roles: read a hex from
+[`tokens/tokens.json`](../tokens/tokens.json) or
+[`tokens/tokens.css`](../tokens/tokens.css), never from here.
+
+| Token | Role |
+| --- | --- |
+| `--lf-color-ink` | Text, outlines, dark surfaces |
+| `--lf-color-ink-soft` | Raised surface in the ink theme |
+| `--lf-color-lemon` | The fruit; primary brand colour |
+| `--lf-color-lemon-bright` | The step above lemon — hover, lift |
+| `--lf-color-fiber` | Fibre cores, active states |
+| `--lf-color-fiber-deep` | "fiber" in the wordmark, links |
+| `--lf-color-fiber-light` | Amber in the ink theme, where the deep tone loses contrast |
+| `--lf-color-leaf` | Leaf only |
+| `--lf-color-paper` | Default surface |
+| `--lf-color-pith` | Inner surface, cards on paper |
+| `--lf-color-canvas` | Page behind cards |
+| `--lf-color-line` | Borders and dividers |
+| `--lf-color-line-soft` | Dividers within a card |
+| `--lf-color-text-muted` | Secondary text |
+| `--lf-color-text-faint` | Tertiary text, one step lighter than muted |
 
 ## Rules
 

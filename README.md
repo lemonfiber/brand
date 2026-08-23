@@ -49,10 +49,11 @@ tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 <img src="assets/logo/lockup-horizontal.svg" alt="lemonfiber" height="48">
 ```
 
-Or via npm, how `lemonfiber-web` consumes it:
+Or as a package. It is not published to a registry — `lemonfiber-web`
+installs it straight from this repo, pinned to a commit:
 
 ```console
-npm install @lemonfiber/brand
+npm install github:lemonfiber/brand#<commit-sha>
 ```
 
 ```css
