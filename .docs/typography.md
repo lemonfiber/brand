@@ -1,6 +1,21 @@
 # Typography
 
-**Bricolage Grotesque** across the board — geometric enough to read technical, round enough to read friendly.
+Three faces, each with one job.
+
+| Face | Token | Sets |
+| --- | --- | --- |
+| **Bricolage Grotesque** | `--lf-font-display` | The wordmark, and display headings on marketing surfaces |
+| **Golos Text** | `--lf-font-body` | Interface text — every product surface, headings included |
+| **DM Mono** | `--lf-font-mono` | Figures, identifiers, paths, and anything read as data |
+
+Bricolage Grotesque is geometric enough to read technical and round enough to
+read friendly, which is right for a wordmark and loud over a screen of controls.
+Golos Text carries the interface at small sizes; DM Mono keeps columns of
+numbers aligned and makes an identifier look like one.
+
+**The wordmark is set only in Bricolage Grotesque ExtraBold (800)**, and never
+re-typeset from its outlined form. Product surfaces reach for it through
+`--lf-font-display` and nothing else.
 
 | Role | Token | Weight | Tracking |
 | --- | --- | --- | --- |
@@ -20,6 +35,9 @@ npm install @fontsource-variable/bricolage-grotesque
 ```ts
 import "@fontsource-variable/bricolage-grotesque";
 ```
+
+All three faces are SIL Open Font License. This repository carries no font
+binaries: a surface installs the packages it needs and serves them itself.
 
 The wordmark is always lowercase, always one word, "fiber" always in a second colour except in one-colour reproduction.
 
