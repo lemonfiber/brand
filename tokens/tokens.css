@@ -5,7 +5,7 @@
   --lf-color-lemon: #F0C419;
   --lf-color-lemon-bright: #FFD84D;
   --lf-color-fiber: #E07A17;
-  --lf-color-fiber-deep: #A85A12;
+  --lf-color-fiber-deep: #9C5411;
   --lf-color-fiber-light: #F09A3C;
   --lf-color-leaf: #5B6B2A;
 
@@ -15,8 +15,8 @@
   --lf-color-canvas: #EDE7D5;
   --lf-color-line: #DAD2BC;
   --lf-color-line-soft: #E4DCC7;
-  --lf-color-text-muted: #6E6A57;
-  --lf-color-text-faint: #8B8770;
+  --lf-color-text-muted: #565344;
+  --lf-color-text-faint: #6A6756;
 
   /* Type */
   --lf-font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
@@ -53,7 +53,12 @@
 [data-lf-theme="ink"] {
   --lf-color-paper: #17160F;
   --lf-color-pith: #241F14;
+  --lf-color-canvas: #100F0A;
   --lf-color-fiber: #F09A3C;
+  --lf-color-fiber-deep: #F09A3C;
   --lf-color-text: #FBF7EA;
+  --lf-color-text-muted: #ACAA9F;
+  --lf-color-text-faint: #8D8972;
   --lf-color-line: #34322A;
+  --lf-color-line-soft: #262419;
 }
