@@ -10,8 +10,15 @@
 | Caption | `--lf-size-caption` | 500 | 0 |
 | Eyebrow / label | `--lf-size-eyebrow` | 700 | 0.18em, uppercase |
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+Self-hosted, never the Google Fonts CDN — no lemonfiber surface loads an asset
+from a third party at runtime:
+
+```console
+npm install @fontsource-variable/bricolage-grotesque
+```
+
+```ts
+import "@fontsource-variable/bricolage-grotesque";
 ```
 
 The wordmark is always lowercase, always one word, "fiber" always in a second colour except in one-colour reproduction.
