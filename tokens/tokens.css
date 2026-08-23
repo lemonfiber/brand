@@ -20,6 +20,8 @@
 
   /* Type */
   --lf-font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --lf-font-body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --lf-font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --lf-weight-display: 800;
   --lf-weight-body: 500;
   --lf-tracking-display: -0.045em;
