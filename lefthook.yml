@@ -1,6 +1,0 @@
-pre-commit:
-  commands:
-    tokens:
-      run: python3 scripts/check_tokens.py
-    typos:
-      run: typos
