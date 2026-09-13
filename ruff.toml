@@ -13,18 +13,16 @@ target-version = "py312"
 line-length = 110
 
 [lint]
-# Correctness first — `F` finds undefined names and unreachable code, `B` the
-# mistakes that still run.
+# The floor, and the reasoning for each rule, live in
+# `lemonfiber/spec`'s `shared/ruff.toml`, which `check_shared_files.py` holds
+# this copy to: every rule below has to stay selected, and nothing may be
+# added to `ignore` that the shared file does not already ignore.
 select = ["E", "W", "F", "B", "I", "SIM", "UP", "RUF", "EXE", "FURB", "ISC"]
 
 ignore = [
-    # The messages quote this repository's prose, which uses typographic dashes
-    # and quotes deliberately.
     "RUF001",
     "RUF002",
     "RUF003",
-    # Width is not what this gets wrong: it carries long colour lists and long
-    # report lines.
     "E501",
 ]
 
