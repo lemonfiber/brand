@@ -1,0 +1,32 @@
+# `scripts/check_tokens.py` is this repository's gate. It decides whether
+# `tokens.css` and `tokens.json` still say the same thing, and whether every
+# body-text pairing meets WCAG AA — and nothing read it.
+#
+# Its `--self-test` holds the contrast arithmetic to ratios WCAG states, which
+# is the harder half. This is the easier half and it was missing: a name that
+# does not exist, a file handle nothing closes, an import a rewrite left behind.
+#
+# The settings lemonfiber/spec holds its own gate scripts to, for the same
+# reason it holds them.
+target-version = "py312"
+
+line-length = 110
+
+[lint]
+# Correctness first — `F` finds undefined names and unreachable code, `B` the
+# mistakes that still run.
+select = ["E", "W", "F", "B", "I", "SIM", "UP", "RUF", "EXE", "FURB", "ISC"]
+
+ignore = [
+    # The messages quote this repository's prose, which uses typographic dashes
+    # and quotes deliberately.
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    # Width is not what this gets wrong: it carries long colour lists and long
+    # report lines.
+    "E501",
+]
+
+[format]
+docstring-code-format = true
