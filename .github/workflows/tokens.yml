@@ -11,6 +11,12 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with: { python-version: "3.12" }
+      # The script before the arithmetic. Everything below is decided by one
+      # file that nothing read — and an undefined name in it reads as a token
+      # that does not match, not as a checker that does not run.
+      - name: The gate script itself
+        run: pipx run ruff==0.16.4 check scripts/
+
       # The arithmetic before what it decides. Parity compares two values
       # somebody wrote down; contrast computes one, and a wrong answer is the
       # only kind here that ships a colour nobody can read while reporting that

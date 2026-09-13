@@ -7,13 +7,17 @@ used to decide anything. Everything else here compares two values somebody wrote
 down; this part computes one, and a wrong answer is the only kind that ships a
 colour nobody can read while reporting that every pairing meets AA.
 """
-import json, re, sys, pathlib
+import json
+import pathlib
+import re
+import sys
 
 BR = pathlib.Path(__file__).resolve().parent.parent
 errs = []
 
 # --- parity: every colour in tokens.json appears in tokens.css with same value ---
-data = json.load(open(BR / "tokens" / "tokens.json"))
+with (BR / "tokens" / "tokens.json").open(encoding="utf-8") as f:
+    data = json.load(f)
 css = (BR / "tokens" / "tokens.css").read_text()
 for name, val in data.get("color", {}).items():
     prop = f"--lf-color-{name}"
@@ -27,11 +31,17 @@ for name, val in data.get("color", {}).items():
 def lin(c):
     c /= 255
     return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+
+
 def luminance(h):
-    h = h.lstrip("#"); r, g, b = (int(h[i:i+2], 16) for i in (0, 2, 4))
-    return 0.2126*lin(r) + 0.7152*lin(g) + 0.0722*lin(b)
+    h = h.lstrip("#")
+    r, g, b = (int(h[i : i + 2], 16) for i in (0, 2, 4))
+    return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b)
+
+
 def ratio(a, b):
-    la, lb = luminance(a), luminance(b); hi, lo = max(la, lb), min(la, lb)
+    la, lb = luminance(a), luminance(b)
+    hi, lo = max(la, lb), min(la, lb)
     return (hi + 0.05) / (lo + 0.05)
 
 col = data["color"]
