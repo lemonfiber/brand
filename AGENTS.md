@@ -33,6 +33,16 @@ the normal lifecycle.
 
 ## Before you open a PR
 
-- `python3 scripts/check_tokens.py` passes.
-- Cite a spec identifier in a commit `Spec:` trailer and the PR body.
-- No AI attribution in commits.
+```sh
+just ci
+```
+
+The token gate and the script that decides it, which is the whole of what CI
+reads in this tree. The `justfile` names what it leaves out and what answers
+each.
+
+Its first step turns this clone's git hooks on, and `.githooks/commit-msg` then
+refuses a commit that CI would refuse — a non-conventional subject, a missing
+sign-off, a missing `Spec:` citation, or a trailer crediting an assistant. All
+four rules are in
+[50-governance/contributing.md](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md#what-a-commit-message-has-to-carry).
