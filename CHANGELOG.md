@@ -4,7 +4,7 @@
 
 - Wordmark converted to outlines in all lockup and wordmark SVGs — assets render identically without the font installed.
 - Added one-colour and knockout horizontal lockups, plus `wordmark-mono.svg`.
-- Added `docs/asset-sheet.html` contact sheet.
+- Added `.docs/asset-sheet.html` contact sheet.
 
 ## 0.1.0 — 2026-07-24
 
