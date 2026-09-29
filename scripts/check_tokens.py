@@ -28,6 +28,24 @@ for name, val in data.get("color", {}).items():
         errs.append(f"parity: {prop} css={m.group(1).strip()} != json={val}")
 
 # --- contrast ---
+# The ink theme is published in both files too (ARCH-R38), and it is held both
+# ways: a value one file carries and the other does not is a dark mode that
+# differs by which file a surface read.
+ink_css = re.search(r'\[data-lf-theme="ink"\]\s*\{([^}]*)\}', css)
+ink_json = data.get("theme", {}).get("ink", {})
+if not ink_css:
+    errs.append('parity: tokens.css has no [data-lf-theme="ink"] block')
+else:
+    in_css = {
+        m.group(1): m.group(2).strip()
+        for m in re.finditer(r"--lf-color-([a-z-]+)\s*:\s*([^;]+);", ink_css.group(1))
+    }
+    for name in sorted(set(in_css) | set(ink_json)):
+        a, b = in_css.get(name), ink_json.get(name)
+        if a is None or b is None or a.lower() != str(b).lower():
+            errs.append(f"parity: ink theme --lf-color-{name} css={a} != json={b}")
+
+
 def lin(c):
     c /= 255
     return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
@@ -51,6 +69,15 @@ for fg in BODY_ON_PAPER:
     r = ratio(col[fg], col["paper"])
     if r < 4.5:
         errs.append(f"contrast: {fg} on paper is {r:.2f}, below AA 4.5 (body-safe set)")
+
+# The same guarantee on the ink theme's own paper, with the ink theme's values:
+# a dark mode is read as much as a light one (ARCH-R40).
+BODY_ON_INK_PAPER = ["text", "text-muted", "text-faint", "fiber-deep"]
+for fg in BODY_ON_INK_PAPER:
+    if fg in ink_json and "paper" in ink_json:
+        r = ratio(ink_json[fg], ink_json["paper"])
+        if r < 4.5:
+            errs.append(f"contrast: {fg} on the ink theme's paper is {r:.2f}, below AA 4.5")
 
 # --- the arithmetic, against ratios WCAG states ---
 # Two of these are the canonical AA boundary: #767676 on white is the darkest
@@ -95,4 +122,4 @@ if "--self-test" in sys.argv[1:]:
 if errs:
     print("\n".join(f"::error::{e}" for e in errs))
     sys.exit(1)
-print("tokens: css/json parity OK; body-text pairings meet WCAG AA")
+print("tokens: css/json parity OK, ink theme included; body-text pairings meet WCAG AA in both themes")
