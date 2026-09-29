@@ -38,7 +38,7 @@ if not ink_css:
 else:
     in_css = {
         m.group(1): m.group(2).strip()
-        for m in re.finditer(r"--lf-color-([a-z-]+)\s*:\s*([^;]+);", ink_css.group(1))
+        for m in re.finditer(r"--lf-color-([a-z-]+)\s*:\s*([^;\s][^;]*);", ink_css.group(1))
     }
     for name in sorted(set(in_css) | set(ink_json)):
         a, b = in_css.get(name), ink_json.get(name)
