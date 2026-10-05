@@ -23,10 +23,15 @@ The tokens hold the values and this page holds the roles: read a hex from
 | `--lf-color-line-soft` | Dividers within a card |
 | `--lf-color-text-muted` | Secondary text |
 | `--lf-color-text-faint` | Tertiary text, one step lighter than muted |
+| `--lf-color-ok` | A thing standing as it should; always beside its shape |
+| `--lf-color-alarm` | A thing that has stopped or failed; always beside its shape |
+| `--lf-color-warn-tint` | Ground behind a warning, which `--lf-color-fiber` marks |
+| `--lf-color-alarm-tint` | Ground behind an alarm |
 
 ## Rules
 
 - Never more than two background colours in one layout.
 - Amber never becomes a background fill at scale — it is line, core, and accent.
+- A severity colour is never the only sign of a state; a shape of its own sits beside it. `--lf-color-fiber` is the warning colour.
 - No blues, teals, or cyans anywhere in the palette.
 - Dark mode: set `data-lf-theme="ink"` on the root; amber lightens to `--lf-color-fiber-light` for contrast.
