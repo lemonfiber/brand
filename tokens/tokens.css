@@ -18,6 +18,12 @@
   --lf-color-text-muted: #565344;
   --lf-color-text-faint: #6A6756;
 
+  /* Colour — severity: always beside a shape of its own */
+  --lf-color-ok: #55701E;
+  --lf-color-alarm: #A82717;
+  --lf-color-warn-tint: #FBEBD8;
+  --lf-color-alarm-tint: #F7E2DD;
+
   /* Type */
   --lf-font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --lf-font-body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -63,4 +69,8 @@
   --lf-color-text-faint: #8D8972;
   --lf-color-line: #34322A;
   --lf-color-line-soft: #262419;
+  --lf-color-ok: #9DB856;
+  --lf-color-alarm: #E8705C;
+  --lf-color-warn-tint: #35240F;
+  --lf-color-alarm-tint: #3A1C16;
 }
