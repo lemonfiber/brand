@@ -42,3 +42,19 @@ lint:
 tokens:
     python3 scripts/check_tokens.py --self-test
     python3 scripts/check_tokens.py
+
+# The images Home Assistant shows for an integration, rendered from the marks:
+# the primary mark as the square icon and the horizontal lockup as the logo, each
+# at the size Home Assistant asks for and at twice it. The renderer is pinned, so
+# the same marks render the same bytes and every copy can be held to these by
+# digest.
+export-home-assistant:
+    #!/usr/bin/env sh
+    set -eu
+    render="npx --yes @resvg/resvg-js-cli@2.6.2-beta.1 --no-system-font"
+    out=assets/logo/export/home-assistant
+    mkdir -p "$out"
+    $render --fit-width 256 assets/logo/mark-primary.svg "$out/icon.png"
+    $render --fit-width 512 assets/logo/mark-primary.svg "$out/icon@2x.png"
+    $render --fit-height 256 assets/logo/lockup-horizontal.svg "$out/logo.png"
+    $render --fit-height 512 assets/logo/lockup-horizontal.svg "$out/logo@2x.png"

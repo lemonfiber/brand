@@ -38,6 +38,7 @@ pattern: open project, protected identity. See the
 
 ```
 assets/logo/   SVG marks (primary, mono, crops, lockups) — proprietary
+  export/      PNG renders of the marks where a platform asks for them — proprietary
 tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 .docs/         usage: logo, colour, typography, contact sheet
 ```
