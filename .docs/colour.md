@@ -2,7 +2,7 @@
 
 Lemon carries the personality, ink carries the structure, fibre-amber is reserved for the fibre itself — it is a signal colour, not a decorative one.
 
-The tokens hold the values and this page holds the roles: read a hex from
+The tokens hold the values, and this page holds the roles: read a hex from
 [`tokens/tokens.json`](../tokens/tokens.json) or
 [`tokens/tokens.css`](../tokens/tokens.css), never from here.
 
