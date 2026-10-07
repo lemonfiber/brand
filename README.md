@@ -8,8 +8,8 @@
 <h1 align="center">Lemonfiber &mdash; brand</h1>
 
 <p align="center">
-  Logo, colour, and type for lemonfiber. Single source of truth &mdash; pull
-  assets from here rather than re-drawing or re-exporting.
+  The logo, colours and type of lemonfiber, a self-hosted media stack. Take
+  assets and design tokens from here rather than re-drawing or re-exporting them.
 </p>
 
 <p align="center">
@@ -29,9 +29,9 @@ This repo is **split**:
 | `tokens/*` | Hippocratic 3.0 ([LICENSE-tokens](LICENSE-tokens)) |
 | `.docs/*` | CC BY-SA 4.0 |
 
-The **marks are protected** — you may build on the code and use the tokens, but
-not ship a fork under the lemonfiber name or logo. This is the Rust/Mozilla/Python
-pattern: open project, protected identity. See the
+The **marks are protected**: you may build on the code and use the tokens, but
+you may not ship a fork under the lemonfiber name or logo. Rust, Mozilla and
+Python protect their identities the same way. See the
 [rationale](https://github.com/lemonfiber/spec/blob/main/90-appendix/license-rationale.md).
 
 ## Structure
@@ -62,6 +62,13 @@ npm install github:lemonfiber/brand#<commit-sha>
 .header { background: var(--lf-color-paper); color: var(--lf-color-ink); }
 ```
 
+For the dark theme, set `data-lf-theme="ink"` on the root element: the colour
+tokens then hold the dark values under the same names.
+
+The type tokens name three typefaces, Bricolage Grotesque, Golos Text and DM
+Mono, with system fallbacks. This repository does not ship the font files;
+[`.docs/typography.md`](.docs/typography.md) says where to get them.
+
 ## The rules, briefly
 
 Never re-colour the mark outside the token palette, never add a tagline, never
@@ -78,10 +85,17 @@ Body-text colour pairings are verified against WCAG AA in CI
 use is a contract violation, not a preference. See spec
 [60-brand/accessibility.md](https://github.com/lemonfiber/spec/blob/main/60-brand/accessibility.md).
 
-## Contributing
+## Contributing and security
 
-The spec is **canonical**. Aesthetic changes within the rules cite `GOV-R12`;
-changes to what the rules permit are `DES-R` changes. Read [AGENTS.md](AGENTS.md).
+Read the [contributing guide](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md)
+before opening a pull request. A change within the rules above is routine; a
+change to what the rules allow is a change to the specification's
+[brand rules](https://github.com/lemonfiber/spec/tree/main/60-brand) first.
+Report a vulnerability as the
+[security policy](https://github.com/lemonfiber/.github/blob/main/SECURITY.md)
+describes, not in a public issue.
+
+What changed in each release is in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
