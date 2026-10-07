@@ -1,5 +1,5 @@
 [default]
-# Ignore hotkey mockup notation like [e]rror, [s]ervice in TUI examples.
+# Ignores hotkey mockup notation like [e]rror, [s]ervice in TUI examples.
 extend-ignore-re = ["\\[[a-z]\\][a-zA-Z]+"]
 
 [default.extend-words]
