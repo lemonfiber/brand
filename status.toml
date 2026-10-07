@@ -1,0 +1,10 @@
+# What this repository has built against the specification, one row per
+# requirement (OPS-R74). Change a row in the pull request that changes whether
+# its requirement is met. The format and the checks are in the specification's
+# scripts/status_check.py; the release gate reads this file.
+
+requirement = [
+  { id = "ARCH-R38", state = "partial", evidence = ["tokens/tokens.css", "scripts/check_tokens.py"] },
+  { id = "ARCH-R40", state = "partial", evidence = ["scripts/check_tokens.py"] },
+  { id = "ARCH-R41", state = "done", evidence = ["tokens/tokens.css", "tokens/tokens.json"], landed = "21b8d507bf5a394f24fedc08f10a954abc3e2549" },
+]
