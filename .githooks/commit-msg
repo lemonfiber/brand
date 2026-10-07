@@ -82,3 +82,5 @@ if [ -n "$faults" ]; then
 fi
 
 exit 0
+
+# A line the canonical hook does not carry.

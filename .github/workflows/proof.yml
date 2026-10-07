@@ -8,3 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "${{ matrix.nothing }}"
+  pinned-to-nothing:
+    uses: lemonfiber/spec/.github/workflows/stale.yml@0000000000000000000000000000000000000000
