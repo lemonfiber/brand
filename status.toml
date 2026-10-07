@@ -1,0 +1,17 @@
+# What this repository implements, one row per requirement (OPS-R74).
+#
+# `done` means the requirement is met in full by what is here, `partial` that this
+# repository holds its part and the rest is not met yet, `open` that nothing here
+# meets it yet. The release gate and the no-stubs gate read this file; a pull
+# request that changes whether a requirement is met changes its row.
+#
+# These are the design-token contract's requirements of the tokens. Deriving every
+# value from them and pinning them by commit (ARCH-R36, ARCH-R37) are
+# lemonfiber-web's.
+
+requirement = [
+  { id = "ARCH-R38", state = "partial", evidence = ["tokens/tokens.css", "tokens/tokens.json", "scripts/check_tokens.py::parity"] },
+  { id = "ARCH-R39", state = "open" },
+  { id = "ARCH-R40", state = "done", evidence = ["tokens/tokens.json", "scripts/check_tokens.py::BODY_ON_INK_PAPER"] },
+  { id = "ARCH-R41", state = "done", evidence = ["tokens/tokens.css", "tokens/tokens.json"] },
+]
