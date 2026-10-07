@@ -12,6 +12,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # The shared gates on two runners, publishing each check under the name the
+  # branch requires (Q-R77). A pull request from a fork is handed a token that
+  # cannot publish a check run, so it runs the jobs below instead.
+  gates:
+    if: ${{ !(github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) }}
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      checks: write
+    uses: lemonfiber/spec/.github/workflows/gates.yml@d197baf33af201ed58c3c8c68c4ebabc8dedb482
+    with:
+      checks: spec-check hygiene workflow-pins security dco attribution commitlint labeler
   # `pull-requests: write` is what lets the gate close a pull request whose
   # citation is missing or names an identifier that does not exist, rather than
   # only going red at it. A reusable workflow's permissions block is a request,
@@ -21,26 +34,34 @@ jobs:
   # nothing, and a job-level block replaces that default outright, so
   # `contents: read` is restated here rather than inherited.
   spec-check:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     permissions:
       contents: read
       pull-requests: write
     uses: lemonfiber/spec/.github/workflows/spec-check.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   hygiene:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/hygiene.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   # Every pin this repository holds on a shared workflow, against what the spec's
   # default branch holds now. It fails naming the commits a pin has not taken; a
   # run that could not ask which they are says so rather than reporting clean.
   workflow-pins:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/workflow-pins.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   security:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/security.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   dco:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/dco.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   attribution:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/attribution.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   commitlint:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     uses: lemonfiber/spec/.github/workflows/commitlint.yml@999f97e9414290f029391d5d541087b8a6d23bdf # v1.0.29
   labeler:
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
     permissions:
       contents: read
       pull-requests: write
