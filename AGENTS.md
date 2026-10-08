@@ -1,10 +1,11 @@
 # AGENTS.md — brand
 
-Guidance for any AI agent working in this repo.
-
-> **Common rules for every lemonfiber repo are canonical in the spec:**
-> [50-governance/ai-contributors.md](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
-> This file is the `brand`-specific header only.
+> **Start at the roadmap and board on [lemonfiber.app](https://lemonfiber.app),
+> rendered from the report of where every unreleased version stands. Then the
+> rules** every repository shares:
+> [working in the repositories](https://github.com/lemonfiber/spec/blob/main/50-governance/working-in-the-repositories.md)
+> and [the rules for agents](https://github.com/lemonfiber/spec/blob/main/50-governance/ai-contributors.md).
+> This file holds only what is true of this repository.
 
 ## What this repo is
 
@@ -41,8 +42,4 @@ The token gate and the script that decides it, which is the whole of what CI
 reads in this tree. The `justfile` names what it leaves out and what answers
 each.
 
-Its first step turns this clone's git hooks on, and `.githooks/commit-msg` then
-refuses a commit that CI would refuse — a non-conventional subject, a missing
-sign-off, a missing `Spec:` citation, or a trailer crediting an assistant. All
-four rules are in
-[50-governance/contributing.md](https://github.com/lemonfiber/spec/blob/main/50-governance/contributing.md#what-a-commit-message-has-to-carry).
+Its first step turns this clone's git hooks on.
