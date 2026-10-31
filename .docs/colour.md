@@ -1,6 +1,6 @@
 # Colour
 
-Lemon carries the personality, ink carries the structure, fibre-amber is reserved for the fibre itself — it is a signal colour, not a decorative one.
+Lemon carries the personality, ink carries the structure, fibre-amber is reserved for the fibre itself — "fiber" in the wordmark, cores, active states — it is a signal colour, not a decorative one.
 
 The tokens hold the values and this page holds the roles: read a hex from
 [`tokens/tokens.json`](../tokens/tokens.json) or
@@ -11,10 +11,10 @@ The tokens hold the values and this page holds the roles: read a hex from
 | `--lf-color-ink` | Text, outlines, dark surfaces |
 | `--lf-color-ink-soft` | Raised surface in the ink theme |
 | `--lf-color-lemon` | The fruit; primary brand colour |
-| `--lf-color-lemon-bright` | The step above lemon — hover, lift |
-| `--lf-color-fiber` | Fibre cores, active states |
-| `--lf-color-fiber-deep` | "fiber" in the wordmark, links |
-| `--lf-color-fiber-light` | Amber in the ink theme, where the deep tone loses contrast |
+| `--lf-color-lemon-bright` | The step above lemon — hover, lift, the lit edge of the lemon in the mark |
+| `--lf-color-fiber` | Fibre cores, active states, the lower rows of "fiber" in the wordmark |
+| `--lf-color-fiber-deep` | Links, the lemon's stem, the ground of the knockout marks |
+| `--lf-color-fiber-light` | Amber in the ink theme, where the deep tone loses contrast; the upper rows of "fiber" in the wordmark and the shaded edge of the lemon |
 | `--lf-color-leaf` | Leaf only |
 | `--lf-color-paper` | Default surface |
 | `--lf-color-pith` | Inner surface, cards on paper |

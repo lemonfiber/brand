@@ -13,8 +13,8 @@ hooks:
     git config core.hooksPath .githooks
     @echo "hooks on: .githooks/commit-msg, .githooks/pre-push"
 
-# The token gate, and the script that decides it — the whole of what CI reads in
-# this tree.
+# The token gate and the script that decides it, which CI reads too, and the
+# logo check, which only a clone runs.
 #
 # It is not CI and does not say it is. Everything else a pull request here starts
 # is forge-side, and these are not here:
@@ -29,7 +29,7 @@ hooks:
 #                                   taken
 #   CodeQL, gitleaks, osv-scanner,  forge-side, and none of them decides
 #   sonar, label                    anything about a token
-ci: hooks lint tokens
+ci: hooks lint tokens logo-check
 
 # The gate script itself. First: a name that does not exist here reads as a
 # token that does not match.
@@ -43,18 +43,14 @@ tokens:
     python3 scripts/check_tokens.py --self-test
     python3 scripts/check_tokens.py
 
-# The images Home Assistant shows for an integration, rendered from the marks:
-# the primary mark as the square icon and the horizontal lockup as the logo, each
-# at the size Home Assistant asks for and at twice it. The renderer is pinned, so
-# the same marks render the same bytes and every copy can be held to these by
-# digest.
-export-home-assistant:
-    #!/usr/bin/env sh
-    set -eu
-    render="npx --yes @resvg/resvg-js-cli@2.6.2-beta.1 --no-system-font"
-    out=assets/logo/export/home-assistant
-    mkdir -p "$out"
-    $render --fit-width 256 assets/logo/mark-primary.svg "$out/icon.png"
-    $render --fit-width 512 assets/logo/mark-primary.svg "$out/icon@2x.png"
-    $render --fit-height 256 assets/logo/lockup-horizontal.svg "$out/logo.png"
-    $render --fit-height 512 assets/logo/lockup-horizontal.svg "$out/logo@2x.png"
+# Every file under assets/logo, drawn from the pixel grids in scripts/logo.py:
+# the SVGs, and their PNG exports at whole multiples of each grid, Home
+# Assistant's icon and logo among them. It removes any file there it does not
+# draw.
+logo:
+    python3 scripts/logo.py
+
+# Fails while a file under assets/logo differs from what the grids draw, or is a
+# file they do not draw.
+logo-check:
+    python3 scripts/logo.py --check
