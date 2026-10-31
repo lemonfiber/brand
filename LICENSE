@@ -3,7 +3,8 @@ Copyright (c) 2026 NightWorks.io
 THE MARKS — PROPRIETARY
 
 The lemonfiber name, logo, wordmark, and marks in this repository
-(everything under assets/logo/) are proprietary. All rights reserved.
+(everything under assets/logo/, and scripts/logo.py, which draws them)
+are proprietary. All rights reserved.
 No licence to use the marks is granted by this file.
 
 This protects the project's identity, the same way Rust, Mozilla and

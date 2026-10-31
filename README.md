@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo/lockup-horizontal-on-ink.svg">
-    <img alt="lemonfiber" src="assets/logo/lockup-horizontal.svg" height="72">
-  </picture>
+  <img alt="lemonfiber" src="assets/logo/hero.svg" width="320">
 </p>
 
 <h1 align="center">Lemonfiber &mdash; brand</h1>
@@ -25,7 +22,7 @@ This repo is **split**:
 
 | Path | Licence |
 |------|---------|
-| `assets/logo/*` | **Proprietary — all rights reserved** ([LICENSE](LICENSE)) |
+| `assets/logo/*`, `scripts/logo.py` | **Proprietary — all rights reserved** ([LICENSE](LICENSE)) |
 | `tokens/*` | Hippocratic 3.0 ([LICENSE-tokens](LICENSE-tokens)) |
 | `.docs/*` | CC BY-SA 4.0 |
 
@@ -37,8 +34,10 @@ Python protect their identities the same way. See the
 ## Structure
 
 ```
-assets/logo/   SVG marks (primary, mono, crops, lockups) — proprietary
+assets/logo/   SVG marks (hero, icon, mark, favicon, tray, mono, lockups) — proprietary
   export/      PNG renders of the marks where a platform asks for them — proprietary
+scripts/       logo.py draws every file in assets/logo/ (proprietary);
+               check_tokens.py is the token gate
 tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 .docs/         usage: logo, colour, typography, contact sheet
 ```
@@ -47,7 +46,7 @@ tokens/        colour / type / space tokens (CSS custom props + JSON) — open
 
 ```html
 <link rel="stylesheet" href="tokens/tokens.css">
-<img src="assets/logo/lockup-horizontal.svg" alt="lemonfiber" height="48">
+<img src="assets/logo/lockup-horizontal.svg" alt="lemonfiber" height="64">
 ```
 
 Or as a package. It is not published to a registry — `lemonfiber-web`
@@ -72,7 +71,8 @@ Mono, with system fallbacks. This repository does not ship the font files;
 ## The rules, briefly
 
 Never re-colour the mark outside the token palette, never add a tagline, never
-stretch or rotate the lockups. **Amber is a signal colour, never a background fill
+stretch or rotate the lockups, and show the pixel marks at whole multiples of
+their grid. **Amber is a signal colour, never a background fill
 or body text** — it fails contrast as text (which is why the brand forbids it).
 Full rules in [`.docs/logo-usage.md`](.docs/logo-usage.md); the binding
 constraints and the accessibility contract are in the spec's

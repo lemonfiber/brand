@@ -24,7 +24,9 @@ and [`60-brand/`](https://github.com/lemonfiber/spec/tree/main/60-brand).
 - **WCAG AA.** Body-text pairings must meet AA; the same script checks it
   (`ARCH-R40`). A failing pairing is a contract violation, not a preference.
 - **The marks are proprietary** (`assets/logo/*`). Tokens and `.docs/` are open.
-- **Wordmarks ship outlined** — never re-typeset; edit the SVG or add an export.
+- **The marks are generated.** `scripts/logo.py` draws every file under
+  `assets/logo/` from pixel grids whose colours resolve through the tokens; change
+  a grid and run `just logo`, never edit an SVG or PNG there by hand.
 
 ## Governance for a visual repo
 
