@@ -259,17 +259,14 @@ kkkkkkkkkkkkkkkk
 ...kkkkkkkkkk...
 """
 
-GLYPHS = {
-    "l": ["X.", "X.", "X.", "X.", "XX"],
-    "e": ["...", "XXX", "XXX", "X..", "XXX"],
-    "m": [".....", "XXXX.", "X.X.X", "X.X.X", "X.X.X"],
-    "o": ["...", "XXX", "X.X", "X.X", "XXX"],
-    "n": ["...", "XX.", "X.X", "X.X", "X.X"],
-    "f": [".XX", ".X.", "XXX", ".X.", ".X."],
-    "i": ["X", ".", "X", "X", "X"],
-    "b": ["X..", "X..", "XXX", "X.X", "XXX"],
-    "r": ["...", "XXX", "X..", "X..", "X.."],
-}
+GLYPH_ART = """
+X. ... ..... ... ... .XX X X.. ...
+X. XXX XXXX. XXX XX. .X. . X.. XXX
+X. XXX X.X.X X.X X.X XXX X XXX X..
+X. X.. X.X.X X.X X.X .X. X X.X X..
+XX XXX X.X.X XXX X.X .X. X XXX X..
+"""
+GLYPHS = {ch: [row.split()[i] for row in GLYPH_ART.strip().split("\n")] for i, ch in enumerate("lemonfibr")}
 
 WORD = "lemonfiber"
 WORD_SCALE = 2
@@ -314,30 +311,34 @@ class Canvas:
                     self.set(x0 + dx, y0 + dy, cell)
 
 
+def span(px, done, x, y):
+    run = 1
+    while x + run < len(px[y]) and px[y][x + run] == px[y][x] and not done[y][x + run]:
+        run += 1
+    return run
+
+
+def drop(px, done, x, y, run):
+    depth = 1
+    while y + depth < len(px) and all(
+        px[y + depth][xx] == px[y][x] and not done[y + depth][xx] for xx in range(x, x + run)
+    ):
+        depth += 1
+    return depth
+
+
 def merge(px):
-    h, w = len(px), len(px[0])
-    done = [[px[y][x] is None for x in range(w)] for y in range(h)]
+    done = [[cell is None for cell in row] for row in px]
     rects = []
-    for y in range(h):
-        x = 0
-        while x < w:
+    for y, row in enumerate(px):
+        for x, colour in enumerate(row):
             if done[y][x]:
-                x += 1
                 continue
-            colour = px[y][x]
-            run = 1
-            while x + run < w and px[y][x + run] == colour and not done[y][x + run]:
-                run += 1
-            depth = 1
-            while y + depth < h and all(
-                px[y + depth][xx] == colour and not done[y + depth][xx] for xx in range(x, x + run)
-            ):
-                depth += 1
+            run = span(px, done, x, y)
+            depth = drop(px, done, x, y, run)
             for yy in range(y, y + depth):
-                for xx in range(x, x + run):
-                    done[yy][xx] = True
+                done[yy][x : x + run] = [True] * run
             rects.append((x, y, run, depth, colour))
-            x += run
     return rects
 
 
@@ -401,25 +402,25 @@ def text_width(word, f):
     return sum(len(GLYPHS[ch][0]) * f for ch in word) + (len(word) - 1) * f
 
 
-def wordmark(c, word, x0, y0, f, ramps, shadow=0):
-    def paint(ox, oy, shadow_pass):
-        x = x0 + ox
-        for i, ch in enumerate(word):
-            top, bottom = ramps[i]
-            glyph = GLYPHS[ch]
-            for gy, row in enumerate(glyph):
-                for gx, bit in enumerate(row):
-                    if bit != "X":
-                        continue
-                    for yy in range(f):
-                        py = gy * f + yy
-                        colour = "K" if shadow_pass else top if py < 3 * f else bottom
-                        c.rect(x + gx * f, y0 + oy + py, f, 1, colour)
-            x += len(glyph[0]) * f + f
+def glyph_cells(word, f):
+    x = 0
+    for i, ch in enumerate(word):
+        glyph = GLYPHS[ch]
+        for gy, row in enumerate(glyph):
+            for gx, bit in enumerate(row):
+                if bit == "X":
+                    yield i, x + gx * f, gy * f
+        x += (len(glyph[0]) + 1) * f
 
+
+def wordmark(c, word, x0, y0, f, ramps, shadow=0):
+    cells = list(glyph_cells(word, f))
     if shadow:
-        paint(shadow, shadow, True)
-    paint(0, 0, False)
+        for _, x, y in cells:
+            c.rect(x0 + x + shadow, y0 + y + shadow, f, f, "K")
+    for i, x, y in cells:
+        top, bottom = ramps[i]
+        c.rect(x0 + x, y0 + y, f, f, top if y < 3 * f else bottom)
 
 
 def lamp(c, x0, floor):
