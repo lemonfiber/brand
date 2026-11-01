@@ -30,12 +30,13 @@ The wordmark is drawn in cells like the mark: each letter is a 5-row pixel glyph
 
 ## Exports
 
-PNG renders for platforms that ask for a bitmap, each at a whole multiple of its grid:
+PNG renders for platforms that ask for a bitmap, each at a whole multiple of its grid, some inside a border of whole pixels. A render with no transparent pixel carries no alpha channel:
 
 | Files | Drawn from | Sizes |
 | --- | --- | --- |
 | `export/app-icon-<size>.png` | `app-icon-16.svg` at 16 and 48, `app-icon.svg` at 32, 192, 512 and 1024 | 16, 32, 48, 192, 512, 1024 |
 | `export/app-icon-touch-180.png` | the icon's lemon on a full paper square | 180 (Apple touch icon) |
+| `export/app-icon-touch-1024.png` | the same square at 28px a cell inside an 8px paper border, fully opaque | 1024 (iOS app icon) |
 | `export/favicon-<size>.png` | `favicon.svg` | 16, 32, 48 |
 | `export/tray-template-<size>[@2x].png`, `export/tray-knockout-<size>[@2x].png` | the tray grid | 16, 22, 32, each with `@2x` |
 | `export/social.png` | `social.svg` | 1280×640 |
