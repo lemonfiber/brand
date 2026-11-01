@@ -359,23 +359,30 @@ def svg(canvas, cell, label):
     return ("\n".join(lines) + "\n").encode()
 
 
-def png(canvas, scale, pad=0):
+def pixel(colour, alpha):
+    if not colour:
+        return b"\x00\x00\x00\x00"
+    return bytes.fromhex(colour[1:]) + (b"\xff" if alpha else b"")
+
+
+def png(canvas, scale, pad=0, ground=None):
     w, h = canvas.w * scale + 2 * pad, canvas.h * scale + 2 * pad
-    clear = b"\x00\x00\x00\x00"
+    alpha = (pad and not ground) or any(cell is None for row in canvas.px for cell in row)
+    edge = pixel(PALETTE[ground] if ground else None, alpha)
     raw = bytearray()
     for y in range(h):
         raw.append(0)
         cy = (y - pad) // scale if pad <= y < h - pad else None
         for x in range(w):
-            colour = canvas.px[cy][(x - pad) // scale] if cy is not None and pad <= x < w - pad else None
-            raw += bytes.fromhex(colour[1:]) + b"\xff" if colour else clear
+            inside = cy is not None and pad <= x < w - pad
+            raw += pixel(canvas.px[cy][(x - pad) // scale], alpha) if inside else edge
 
     def chunk(kind, data):
         return struct.pack(">I", len(data)) + kind + data + struct.pack(">I", zlib.crc32(kind + data))
 
     return (
         b"\x89PNG\r\n\x1a\n"
-        + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 6, 0, 0, 0))
+        + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 6 if alpha else 2, 0, 0, 0))
         + chunk(b"IDAT", zlib.compress(bytes(raw), 9))
         + chunk(b"IEND", b"")
     )
@@ -608,6 +615,7 @@ def build():
         "wordmark-mono.svg": svg(wordmark_alone(MONO["k"]), 8, "lemonfiber wordmark, one colour"),
         "export/social.png": png(social(), 10),
         "export/app-icon-touch-180.png": png(touch_icon(), 5),
+        "export/app-icon-touch-1024.png": png(touch_icon(), 28, 8, "p"),
         "export/home-assistant/icon.png": png(icon, 8),
         "export/home-assistant/icon@2x.png": png(icon, 16),
         "export/home-assistant/logo.png": png(horizontal, 8),
