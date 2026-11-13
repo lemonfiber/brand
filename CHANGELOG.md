@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- `tokens.json` carries every token `tokens.css` does: `font.trackingEyebrow`, `shadow.lift`, and a `fallback` block listing each font's fallback families in order, so a CSS font stack is its `font` family followed by its `fallback` list.
+- `scripts/check_tokens.py` holds every token both ways, in every category and in the ink theme, and its `--self-test` holds the parity check to each way the two files can drift apart.
+
 ## 0.4.0 — 2026-11-01
 
 - The mark is a whole pixel lemon with a play triangle and a leaf, drawn on a 32-cell grid with a 16-cell redraw for small sizes; the wordmark is drawn in the same cells, with "fiber" in amber.
