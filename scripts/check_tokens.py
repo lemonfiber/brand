@@ -34,7 +34,7 @@ def own_category(key):
 
 def declared(block):
     """Every custom property a CSS block declares, by name, with its value as written."""
-    return {m.group(1): m.group(2).strip() for m in re.finditer(r"(--lf-[a-z0-9-]+)\s*:\s*([^;]+);", block)}
+    return {m.group(1): m.group(2).strip() for m in re.finditer(r"(--lf-[a-z0-9-]+)\s*:([^;]*);", block)}
 
 
 def stack(value):
