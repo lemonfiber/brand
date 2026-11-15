@@ -10,7 +10,7 @@
 # lemonfiber-web's.
 
 requirement = [
-  { id = "ARCH-R38", state = "partial", evidence = ["tokens/tokens.css", "tokens/tokens.json", "scripts/check_tokens.py::parity"] },
+  { id = "ARCH-R38", state = "done", evidence = ["tokens/tokens.css", "tokens/tokens.json", "scripts/check_tokens.py::def parity(data, css)", "scripts/check_tokens.py::def parity_self_test()", ".github/workflows/tokens.yml"] },
   { id = "ARCH-R39", state = "open" },
   { id = "ARCH-R40", state = "done", evidence = ["tokens/tokens.json", "scripts/check_tokens.py::BODY_ON_INK_PAPER"] },
   { id = "ARCH-R41", state = "done", evidence = ["tokens/tokens.css", "tokens/tokens.json"] },
